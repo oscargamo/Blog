@@ -1,0 +1,25 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+    <h1 class="title">{{article.title}}</h1>
+    <hr><br>
+    <div class= "ifmage">
+        {% if article.image != 'null' and article.image.url|length >= 1 %}
+        <div class="image">
+            <img src="{{article.image.url}} " alt="Esto es una imagen" width="400">
+        </div>
+    {% endif%}
+    </div>
+    <div class= "dfata">
+        <p>
+            <span>{{ article.created_at}}</span>
+            {{article.content|safe}}
+        </p>
+    </div>
+    
+    <br>
+    <!--Cargamos el codigo que vienen de templates-->
+    <br>
+    
+    
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+    <h1 class="title">{{page.title}}</h1>
+    <hr><br>
+    <span>{{ page.created_at}}</span>
+    <br>
+    <!--Cargamos el codigo que vienen de templates-->
+    <br>
+    <p>{{page.content|safe}}</p>
+{% endblock content %}

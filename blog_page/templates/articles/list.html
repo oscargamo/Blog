@@ -1,0 +1,10 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+    <h1 class="title">{{Category.name}}</h1>
+    <hr><br>
+    <!--Cargamos el codigo que vienen de templates-->
+
+    {% include 'articles/article.html' %}
+    {% include 'articles/pagination.html' %}
+{% endblock content %}

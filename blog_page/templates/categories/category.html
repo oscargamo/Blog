@@ -1,0 +1,12 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+    <h1 class="title">Categoría - {{category.name}}</h1>
+    <hr><br>
+    <!--Cargamos el codigo que vienen de templates-->
+
+
+    {# Podemos agregar una condicion with al include para que este procese la informacion que vamos a mostrar ejemplo  {% include 'articles/article.html' with articles = category.article_set.all %}  igual y podemos cambiar article_set por articles asignandole al modelo con el nombre de related_name#}
+    {% include 'articles/article.html' with articles=category.articles.all  %}
+
+{% endblock content %}

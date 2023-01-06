@@ -1,0 +1,247 @@
+/*Estilos Generales */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+/* Estilos de la Cabezera*/
+
+header {
+    width: 1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0 auto;
+}
+
+/*Estilos para el logotipo*/
+#logotipo {
+    width: 45%;
+    height: 125px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+/* Estilos para la imagen */
+#logotipo img {
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+}
+
+/* Estilos para el titulo del header */
+#logotipo h1 {
+    margin: 0px;
+    float: left;
+    display: block;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: #2ba977;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* Estilos para la navegacion */
+nav {
+    width: 1250px;
+    height: 40px;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+}
+
+nav>ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav>ul>li {
+    line-height: 40px;
+    float: left;
+}
+
+nav>ul>li>a {
+    display: block;
+    padding: 0 10px 0 10px;
+    color: white;
+}
+
+nav>ul>li>a:hover {
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset;
+    color: white;
+    transition: all 300ms;
+}
+
+/* Estilos para en menú desplegable */
+nav >ul >li > ul{
+    display: none;
+    position: absolute;
+    color: white;
+    text-align:left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+}
+nav >ul >li:hover > ul{
+    display: block;
+    color:white;
+    margin:0px;
+    list-style: none;
+}  
+
+nav >ul >li:hover > ul li{
+    background: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+nav >ul >li:hover > ul li a{
+    color:#666;
+
+}
+nav >ul >li:hover > ul li:hover{
+    background-color:#2ba977;
+    
+}
+nav >ul >li:hover > ul li:hover a{
+    color:#fff;
+    display: block;
+}
+
+
+
+/* Estilos del contenido  */
+
+#content {
+    width: 1212px;
+    min-height: 900px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+}
+
+/* Damos estilos a la box */
+
+.box {
+    background: white;
+    margin: 0 auto;
+    width: 95%;
+    min-height: 900px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.box a{
+    color: #444;
+}
+.box a:hover{
+    color: #2ba977;
+    transition: all 100ms;
+}
+
+/* Estilos para el formulario de Articles */
+.box form {
+    width: 40%;
+}
+
+.box form input,
+label {
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select {
+    width: 50%;
+
+}
+
+.box form input[type="submit"] {
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    color: white;
+    border: 1px solid#444;
+}
+
+/* Estilos para el footer */
+footer {
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    color: #d1d4d6;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
+    margin: 0 auto;
+}
+
+/* Estilos de la validacion */
+.error {
+    color: red;
+}
+
+form ul li {
+    color: red;
+}
+
+.mensaje {
+    padding: 10px;
+    background-color: #2ba977;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Damos estilos para los articulos */
+
+.article-items {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(175, 174, 174);
+    margin-top: 30px;
+}
+
+
+.article-items .image img {
+    width: 300px;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.article-items .data {
+    padding-left: 10px;
+}
+
+.article-items .data h2 {
+    margin-bottom: 10px;
+}
+
+.article-items .data span {
+    font-weight: lighter;
+    color: #717374
+}
+
+.article-items .data p {
+    padding: 5px;
+}

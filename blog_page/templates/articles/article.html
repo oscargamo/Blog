@@ -1,0 +1,36 @@
+    {% for article in articles %}
+        
+        <article class="article-items">
+            {% if article.image != 'null' and article.image.url|length >= 1 %}
+                <div class="image">
+                    <img src="{{article.image.url}} " alt="Esto es una imagen">
+                </div>
+            {% endif%}
+            <div class="data">
+                <a href="{% url 'article' article.id%} ">
+                    <h2>{{article.title}}</h2>
+                </a>
+                
+                <p><!-- Aqui hacemos un recorrido de las categorias -->
+                    {% for category in article.categories.all %}
+                        <a href="{% url 'categoria' category.id %}">{{ category.name}}</a>
+                        <!-- Para comprobar el numero de indices se esta recorriendo y coprobamos si es inferior al numero de categorias entonces le asifgnmos un - al final -->
+                        {% if forloop.counter < article.categories.all|length %}
+                            {{'-'}}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+
+                <p>
+                    <span class="date">
+                        {{article.user.first_name}} {{article.user.last_name}}
+                        {{article.updated_at}}
+                    </span>
+                </p>
+                <p>
+                    {{article.content|safe}}
+                </p>
+            </div>
+        </article>
+    
+    {% endfor %}
